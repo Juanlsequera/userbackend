@@ -1,0 +1,360 @@
+{
+    "info": {
+        "_postman_id": "c2bad29c-f79c-422a-bafd-7276111d2b26",
+        "name": "User LOCAL",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "14566661"
+    },
+    "item": [
+        {
+            "name": "User",
+            "item": [
+                {
+                    "name": "/users/login",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"batman@gmail.com\",\n    \"password\": \"12345678\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/users/login",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "users",
+                                "login"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "/users/create",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"batman@gmail.com\",\n    \"password\": \"12345678\",\n    \"name\": \"batman\",\n    \"lastname\": \"alejandro\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/users/create",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "users",
+                                "create"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "/users/all",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": ""
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/users/all",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "users",
+                                "all"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "/users/:id",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/users/62d4b13c70b0b7ce99c74a65",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "users",
+                                "62d4b13c70b0b7ce99c74a65"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "email",
+            "item": [
+                {
+                    "name": "/email/send",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"juanlsequeramartinez@gmail.com\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/email/send",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "email",
+                                "send"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Photos",
+            "item": [
+                {
+                    "name": "/photos/upload",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "",
+                                "value": "",
+                                "type": "text",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "files",
+                                    "type": "file",
+                                    "src": "/home/juan/Escritorio/batman.jpeg"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/photos/upload",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "photos",
+                                "upload"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "/photos/:id",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "files",
+                                    "value": "",
+                                    "type": "text",
+                                    "disabled": true
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/photos/batman.jpeg",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "photos",
+                                "batman.jpeg"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "/photos/edit",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"batman.jpeg\",\n    \"newName\": \"zarasa12.jpeg\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/photos/edit",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "photos",
+                                "edit"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "/photos/url/:id",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/photos/url/batman.jpeg",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "photos",
+                                "url",
+                                "batman.jpeg"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "/photos/unplash",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "files",
+                                    "value": "",
+                                    "type": "text",
+                                    "disabled": true
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/photos/unplash/upload/randomPhoto",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "photos",
+                                "unplash",
+                                "upload",
+                                "randomPhoto"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "https://api.unsplash.com/photos/random?client_id=kvnGov5FVgz_fxLVIiryMLfaJV5kJmX_jIPCi9lkNPg",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://api.unsplash.com/photos/random?client_id=kvnGov5FVgz_fxLVIiryMLfaJV5kJmX_jIPCi9lkNPg",
+                            "protocol": "https",
+                            "host": [
+                                "api",
+                                "unsplash",
+                                "com"
+                            ],
+                            "path": [
+                                "photos",
+                                "random"
+                            ],
+                            "query": [
+                                {
+                                    "key": "client_id",
+                                    "value": "kvnGov5FVgz_fxLVIiryMLfaJV5kJmX_jIPCi9lkNPg"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}
