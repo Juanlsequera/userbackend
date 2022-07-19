@@ -6,9 +6,7 @@ import { config } from 'aws-sdk';
 import { ConfigService } from '@nestjs/config';
 
 async function bootstrap() {
-  /// Add port not used process.env
   const app = await NestFactory.create(AppModule);
-  /// Set config service (.env)
   const configService: ConfigService = app.get(ConfigService);
   const appPort: string = await configService.get('APP_PORT');
   /// Add validations Pipes

@@ -26,6 +26,7 @@ https://docs.docker.com/compose/install/
 
 ```bash
 # running mongo db from docker:
+# be positioned at the root path of the project.
 $ docker-compose up
 ```
 
